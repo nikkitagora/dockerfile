@@ -1,21 +1,3 @@
-# FROM ubuntu:latest
-
-# WORKDIR /usr/share/nginx/html
-
-# RUN apt update -y && apt upgrade -y && \
-#     apt install -y nginx git && \
-#     rm -rf /var/lib/apt/lists/*
-
-# RUN rm -rf /usr/share/nginx/html/* && \
-#     git clone --depth=1 https://github.com/nikkitagora/website . && \
-#     [ -d "website/1dwebsite" ] && mv website/1dwebsite/* . || echo "Directory not found"
-#     # git clone https://github.com/nikkitagora/website /usr/share/nginx/html && \
-#     # mv /usr/share/nginx/html/website/1dwebsite/* /usr/share/nginx/html
-
-# EXPOSE 8080
-
-# CMD ["nginx", "-g", "daemon off;"]
-
 FROM ubuntu:22.04
 
 # Install Nginx, Git, and clean up apt cache
